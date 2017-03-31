@@ -10,30 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var hero_service_1 = require('./hero.service');
-var AppComponent = (function () {
-    function AppComponent(heroService) {
+var HeroesComponent = (function () {
+    function HeroesComponent(heroService) {
         this.heroService = heroService;
         this.title = 'Tour of Heroes';
     }
-    AppComponent.prototype.ngOnInit = function () {
+    HeroesComponent.prototype.ngOnInit = function () {
         this.getHeroes();
     };
-    AppComponent.prototype.getHeroes = function () {
+    HeroesComponent.prototype.getHeroes = function () {
         var _this = this;
         this.heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes; });
     };
-    AppComponent.prototype.onSelect = function (hero) {
+    HeroesComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
     };
-    AppComponent = __decorate([
+    HeroesComponent = __decorate([
         core_1.Component({
             selector: 'my-heroes',
             template: "\n    <h1>{{title}}</h1>\n    <h2>My Heroes</h2>\n    <ul class=\"heroes\">\n      <li *ngFor=\"let hero of heroes\"\n          [class.selected]=\"hero === selectedHero\"\n          (click)=\"onSelect(hero)\">\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n      </li>\n    </ul>\n    <hero-detail [hero]=\"selectedHero\"></hero-detail>\n  ",
             providers: [hero_service_1.HeroService]
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroesComponent);
+    return HeroesComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.HeroesComponent = HeroesComponent;
 //# sourceMappingURL=heroes.component.js.map

@@ -18,7 +18,7 @@ import { HeroService } from './hero.service';
   `,
   providers: [HeroService]
 })
-export class AppComponent implements OnInit {
+export class HeroesComponent  implements OnInit {
   heroes: Hero[];
   title = 'Tour of Heroes';
   selectedHero: Hero;
@@ -32,7 +32,6 @@ export class AppComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
-
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
