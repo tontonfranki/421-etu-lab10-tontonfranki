@@ -28,7 +28,7 @@ var HeroesComponent = (function () {
     HeroesComponent = __decorate([
         core_1.Component({
             selector: 'my-heroes',
-            template: "\n    <h1>{{title}}</h1>\n    <h2>My Heroes</h2>\n    <ul class=\"heroes\">\n      <li *ngFor=\"let hero of heroes\"\n          [class.selected]=\"hero === selectedHero\"\n          (click)=\"onSelect(hero)\">\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n      </li>\n    </ul>\n    <hero-detail [hero]=\"selectedHero\"></hero-detail>\n  ",
+            template: "    \n    <h2>My Heroes</h2>\n    <ul class=\"heroes\">\n      <li *ngFor=\"let hero of heroes\"\n          [class.selected]=\"hero === selectedHero\"\n          (click)=\"onSelect(hero)\">\n        <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n      </li>\n    </ul>\n    <hero-detail [hero]=\"selectedHero\"></hero-detail>\n  ",
             providers: [hero_service_1.HeroService]
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService])
