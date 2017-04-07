@@ -5,12 +5,6 @@
     <title>Tour of heroes</title>
 </head>
 <body>
-<div>
-  <label>Hero name:</label> <input #heroName />
-  <button (click)="add(heroName.value); heroName.value=''">
-    Add
-  </button>
-</div>
 <div *ngIf="hero">
   <h2>{{hero.name}} details!</h2>
   <div>
